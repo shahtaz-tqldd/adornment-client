@@ -1,0 +1,19 @@
+.banner-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* banner text */
+.banner-text h1{
+    color: rgba(47, 47, 47, 0.856);
+}
+.banner-text h1 span{
+    color: rgb(0, 191, 134);
+}
+
+/* banner image */
+.banner-img img{
+    height: 430px;
+}
