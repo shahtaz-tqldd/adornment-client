@@ -34,8 +34,8 @@ const Footer = () => {
         </div>
         <div className="footer-contact">
           <h3 className='mb-10'>Contact</h3>
-          <FontAwesomeIcon icon={faPhone} />&nbsp; +880 1521 305 392 <br />
-          <FontAwesomeIcon icon={faMailBulk} />&nbsp; shahtazrahman17@gmail.com
+          <small><FontAwesomeIcon icon={faPhone} />&nbsp; +880 1521 305 392 </small> <br />
+          <small><FontAwesomeIcon icon={faMailBulk} />&nbsp; shahtazrahman17@gmail.com</small>
           <h3 className='mt-30 mb-10'>Follow Me</h3>
           <div className="social-media mt-10">
             <a href='https://www.facebook.com/'><FaFacebook /></a>

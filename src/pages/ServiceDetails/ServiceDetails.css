@@ -1,0 +1,120 @@
+.service-details{
+    margin: 40px auto;
+}
+.service-details a{
+    text-decoration: none;
+    color: var(--color-blue);
+}
+.service-details img{
+    height: 350px;
+    width: 700px;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+.service-details-head{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.service-details-head>div>h1{
+    font-size: 40px;
+    color: var(--btn-bg);
+    width: 300px;
+}
+.service-details-head>div>p{
+    margin: 12px 0;
+}
+.service-details-head>div>p>span{
+    font-size: 30px;
+}
+
+/* description */
+.description{
+    margin: 40px 0;
+}
+.descrip{
+    display: flex;
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
+    gap: 60px;
+}
+.descrip>div{
+    background-color: rgb(124, 238, 255);
+    border-radius: 10px;
+    padding: 30px 60px;
+    height: 200px;
+}
+.descrip p{
+    text-align: justify;
+    color: rgba(34, 34, 34, 0.782);
+}
+.descrip>div>img{
+    height: 150px;
+    width: auto;
+}
+.h-2{
+    margin: 10px 0;
+    color: var(--color-logo);
+}
+
+/* features */
+
+.features>ul>li{
+    list-style: none;
+    font-size: 18px;
+    color: rgb(0, 177, 112);
+    margin: 10px 0;
+}
+.services-img{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin: 0 0 40px 0;
+}
+.services-img img{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+/*---------------------------------------------------------------
+ Review 
+ ----------------------------------------------------------------*/
+ .h-3{
+    margin: 50px 0 20px 0;
+    color: var(--btn-bg);
+ }
+ .review-container{
+    display: flex;
+    flex-direction: column;
+ }
+ .review{
+    display: flex;
+    background-color: #fff;
+    border-radius: 7px;
+    padding: 15px 20px;
+    max-width: 700px;
+ }
+ .review img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+ }
+
+
+@media screen and (max-width: 667px) {
+    .service-details{
+        padding: 0 20px;
+    }
+    .live{
+        display: none;
+    }
+    .services-img{
+        grid-template-columns: repeat(1, 1fr);
+        
+    }
+    
+}
