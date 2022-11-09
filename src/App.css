@@ -9,6 +9,10 @@
     margin: 0 auto;
 }
 
+.center{
+    text-align: center;
+}
+
 button{
     padding: 10px 20px;
     margin: 25px 0;

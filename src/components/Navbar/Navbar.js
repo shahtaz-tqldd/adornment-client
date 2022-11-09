@@ -24,7 +24,7 @@ const Navbar = () => {
 
         <div className={`nav-items ${open ? 'shown' : 'hide'}`}>
           <Link to='/'>Home</Link>
-          <Link to='/courses'>Services</Link>
+          <Link to='/services'>Services</Link>
           <Link to='/faq'>FAQ</Link>
           <Link to='/blogs'>Blogs</Link>
         </div>
