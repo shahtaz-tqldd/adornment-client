@@ -16,20 +16,23 @@ nav {
 
 .nav-logo a{
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     text-decoration: none;
 }
 
 .nav-logo a h2{
-    font-size: 24px;
-    font-weight: 600;
-    margin-left: -6px;
-    color: rgb(74, 52, 75);
+    font-size: 20px;
+    font-weight: 200;
+    margin-bottom: 8px;
+    color: rgba(34, 34, 34, 0.895);
 }
 
 .nav-logo img {
     height: 40px;
-    padding: 12px;
+    padding: 8px;
+    margin: 8px;
+    background-color: var(--color-logo);
+    border-radius: 10px 0;
 }
 
 .nav-items {
@@ -45,7 +48,7 @@ nav {
 }
 
 .nav-items2 a:nth-child(2n) {
-    background-color: rgb(34, 119, 255);
+    background-color: var(--color-nav);
     color: #fff;
 }
 
@@ -63,16 +66,16 @@ nav {
 
 .nav-items2 a {
     text-decoration: none;
-    color: rgb(34, 119, 255);
+    color: var(--color-nav);
     margin: 0 10px;
-    border: 2px solid rgb(34, 119, 255);
+    border: 2px solid var(--color-nav);;
     padding: 3px 15px;
     border-radius: 4px;
 }
 
 .nav-items a {
     text-decoration: none;
-    color: var(--color-blue);
+    color: var(--color-nav);
     margin: 0 20px;
 }
 

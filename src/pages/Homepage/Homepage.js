@@ -3,6 +3,7 @@ import useTitle from '../../assets/hooks/useTitle';
 import ServiceCard from '../../components/ServiceCard/ServiceCard';
 import AboutUs from './AboutUs/AboutUs';
 import Banner from './Banner/Banner';
+import plant from '../../assets/images/error.png'
 import './Homepage.css';
 
 const Homepage = () => {
@@ -38,10 +39,13 @@ const Homepage = () => {
 
         <div className='want-design'>
           <div>
-            <p>Do you need to an</p>
-            <h1>Interior Designer?</h1>
+            <img src={plant} alt="" />
           </div>
-          <button className='btn-contact'>Contact Me</button>
+          <div>
+            <p>Do you need an</p>
+            <h1>Interior Designer?</h1>
+            <button className='btn-contact'>Contact Me</button>
+          </div>
         </div>
       </div>
     </>

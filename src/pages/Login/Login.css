@@ -1,0 +1,103 @@
+.login-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.login-img img{
+    height: 400px;
+}
+
+.login-form-container{
+    padding: 20px 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+.login-form-container>form>a{
+    text-decoration: none;
+    color: rgb(0, 135, 219);
+    margin-left: 10px;
+}
+.login-form-container>form>input{
+    padding: 10px 20px;
+    margin: 10px 0;
+    width: 300px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-family: 'Poppins';
+    border: none;
+    background-color: rgba(15, 255, 199, 0.15)
+}
+
+.login-form-container>form>input:focus{
+    border: none;
+    background-color: rgba(15, 179, 255, 0.436);
+    outline: none;
+}
+
+.login-icon{
+    color: rgba(40, 78, 74, 0.742);
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.btn-login{
+    width: 100% !important;
+    border: none !important;
+    border-radius: 5px !important;
+    color: #fff;
+    cursor: pointer;
+    background-color: var(--btn-bg) !important;
+}
+
+.btn-login:hover{
+    background-color: var(--btn-bg-hover) !important;
+    transition: 0.25s;
+}
+
+/* horizontal line */
+.hr-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.hr-line span {
+    height: 1px;
+    width: 40%;
+    background-color: rgb(153, 153, 153);
+}
+
+.hr-line p {
+    padding: 0 20px;
+}
+
+/* login social */
+.login-social{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.login-social>span{
+    margin: 0px 20px;
+    cursor: pointer;
+}
+.login-social>span>img{
+    height: 28px;
+}
+.sign-up{
+    margin-top: 25px;
+    text-align: center;
+}
+.sign-up a{
+    text-decoration: none;
+    color: var(--btn-bg-hover);
+}
+.sign-up a:hover{
+    transition: 0.2s;
+    color: var(--btn-bg);
+}

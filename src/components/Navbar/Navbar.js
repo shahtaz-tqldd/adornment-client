@@ -17,7 +17,7 @@ const Navbar = () => {
 
         <div className='nav-logo'>
           <Link to='/'>
-            <img src={logo} alt="ada academy logo"></img>
+            <img src={logo} alt="adornment logo"></img>
             <h2>adornment</h2>
           </Link>
         </div>
@@ -31,7 +31,7 @@ const Navbar = () => {
 
         <div className='nav-items2'>
           <Link to='/login'>Sign In</Link>
-          {/* <Link to='/sign-up'>Sign Up</Link> */}
+          <Link to='/sign-up'>Sign Up</Link>
         </div>
       </div>
     </nav>

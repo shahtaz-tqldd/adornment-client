@@ -1,6 +1,9 @@
 :root{
     --color-blue: #009eb3;
+    --color-nav: #EE6983;
+    /* --color-nav: #159c8c; */
     --btn-bg : #EE6983;
+    --color-logo: rgb(89, 200, 255);
     --btn-bg-hover : rgb(254, 63, 85);
     --color-off-white: rgb(216, 216, 216);
 }
