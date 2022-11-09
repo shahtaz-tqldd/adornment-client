@@ -36,3 +36,31 @@ button:hover .btn-icon{
     margin-left: 5px;
     transition: 0.25s;
 }
+
+@media screen and (max-width: 667px) {
+    button{
+        padding: 8px 16px;
+        margin: 16px 0;
+        border-radius: 4px;
+        font-size: 12px;
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.6);
+    }
+    button:hover{
+        padding: 8px 20px;
+    }
+}
+
+/*------------------------
+responsive for tab device
+-------------------------- */
+@media screen and (min-width: 668px) and (max-width: 992px) {
+    button{
+        padding: 8px 16px;
+        margin: 20px 0;
+        font-size: 14px;
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.6);
+    }
+    button:hover{
+        padding: 8px 20px;
+    }
+}

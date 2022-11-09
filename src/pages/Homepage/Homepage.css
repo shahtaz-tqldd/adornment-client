@@ -17,11 +17,48 @@
     margin-top: 50px;
 }
 
+/*---------------------------
+responsive for mobile device
+----------------------------- */
 @media screen and (max-width: 667px) {
+    /* banner */
     .banner-bg{
-        background-image: linear-gradient(to bottom,#D6CEC9 0%, #D6CEC9 80% ,#AB9D92 80%, #AB9D92 100% );
+        background-image: linear-gradient(to bottom,#D6CEC9 0%, #D6CEC9 81% ,#AB9D92 81%, #AB9D92 100% );
+    }
+    .banner-text{
+        margin: 35px 0;
+    }
+    .banner-text h1{
+        font-size: 21px;
+    }
+    .banner-img img{
+        height: 330px;
     }
     .service-card-container{
         grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/*------------------------
+responsive for tab device
+-------------------------- */
+@media screen and (min-width: 668px) and (max-width: 992px) {
+    /* banner */
+    .banner-bg{
+        background-image: linear-gradient(to bottom,#D6CEC9 0%, #D6CEC9 70% ,#AB9D92 70%, #AB9D92 100% );
+    }
+    .banner-text{
+        margin-top: 30px;
+    }
+    .banner-text h1{
+        font-size: 21px;
+    }
+    .banner-img img{
+        height: 330px;
+    }
+
+    /* services */
+    .service-card-container{
+        grid-template-columns: repeat(2, 1fr);
     }
 }
