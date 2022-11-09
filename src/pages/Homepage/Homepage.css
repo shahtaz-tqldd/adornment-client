@@ -1,16 +1,16 @@
-.banner-bg{
-    background-image: linear-gradient(to bottom,#D6CEC9 0%, #D6CEC9 70% ,#AB9D92 70%, #AB9D92 100% );
+.banner-bg {
+    background-image: linear-gradient(to bottom, #D6CEC9 0%, #D6CEC9 70%, #AB9D92 70%, #AB9D92 100%);
     color: #ac6f57;
 }
 
-.home-services h1{
+.home-services h1 {
     font-size: 60px;
     font-weight: 200;
     color: var(--btn-bg);
     margin-top: 100px;
 }
 
-.service-card-container{
+.service-card-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 18px;
@@ -18,24 +18,57 @@
 }
 
 /*---------------------------
+ want-design 
+ ----------------------------*/
+.want-design {
+    max-width: 80%;
+    margin: 70px auto 0;
+    border-radius: 10px;
+    background-color: #00bc8a;
+    color: #fff;
+    padding: 50px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around
+}
+
+.want-design p {
+    font-size: 24px;
+}
+
+
+/*---------------------------
 responsive for mobile device
 ----------------------------- */
 @media screen and (max-width: 667px) {
+
     /* banner */
-    .banner-bg{
-        background-image: linear-gradient(to bottom,#D6CEC9 0%, #D6CEC9 81% ,#AB9D92 81%, #AB9D92 100% );
+    .banner-bg {
+        background-image: linear-gradient(to bottom, #D6CEC9 0%, #D6CEC9 81%, #AB9D92 81%, #AB9D92 100%);
     }
-    .banner-text{
+
+    .banner-text {
         margin: 35px 0;
     }
-    .banner-text h1{
+
+    .banner-text h1 {
         font-size: 21px;
     }
-    .banner-img img{
+
+    .banner-img img {
         height: 330px;
     }
-    .service-card-container{
+
+    .service-card-container {
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    /* contact me */
+    .want-design {
+        flex-direction: column;
+    }
+    .btn-contact:hover{
+        padding: 8px 16px;
     }
 }
 
@@ -43,22 +76,29 @@ responsive for mobile device
 responsive for tab device
 -------------------------- */
 @media screen and (min-width: 668px) and (max-width: 992px) {
+
     /* banner */
-    .banner-bg{
-        background-image: linear-gradient(to bottom,#D6CEC9 0%, #D6CEC9 70% ,#AB9D92 70%, #AB9D92 100% );
+    .banner-bg {
+        background-image: linear-gradient(to bottom, #D6CEC9 0%, #D6CEC9 70%, #AB9D92 70%, #AB9D92 100%);
     }
-    .banner-text{
+
+    .banner-text {
         margin-top: 30px;
     }
-    .banner-text h1{
+
+    .banner-text h1 {
         font-size: 21px;
     }
-    .banner-img img{
+
+    .banner-img img {
         height: 330px;
     }
 
     /* services */
-    .service-card-container{
+    .service-card-container {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .btn-contact:hover{
+        padding: 8px 16px;
     }
 }

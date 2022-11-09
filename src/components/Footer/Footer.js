@@ -10,10 +10,12 @@ const Footer = () => {
   return (
     <footer>
       <div className='container footer-container'>
-        <div className="footer-col-1">
+        <div>
           <div className='footer-logo'>
-            <img src={logo} alt="" />
-            <h3>adornment</h3>
+            <Link to='/'>
+              <img src={logo} alt="" />
+              <h2>adornment</h2>
+            </Link>
           </div>
           <div className='footer-link'>
             <Link to='/'>Home</Link>
@@ -25,16 +27,16 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer-about">
-          <h2>About</h2>
+          <h3>About</h3>
           <p>Adornment Interior Solution provides interior design to home, office and restaurant. Adornment has done 12 home decoration projects, 5 offices and 1 restaurants so far. Please Contact for details. </p>
-          <h2>Address</h2>
-          <p>Zigatala, Dhanmondi-15, Dhaka</p>
+          <h3>Address</h3>
+          <p>Zigatala, Dhanmondi-15<br /> Dhaka, Bangladesh</p>
         </div>
         <div className="footer-contact">
-          <h2 className='mb-10'>Contact</h2>
+          <h3 className='mb-10'>Contact</h3>
           <FontAwesomeIcon icon={faPhone} />&nbsp; +880 1521 305 392 <br />
           <FontAwesomeIcon icon={faMailBulk} />&nbsp; shahtazrahman17@gmail.com
-          <h2 className='mt-30 mb-10'>Follow Me</h2>
+          <h3 className='mt-30 mb-10'>Follow Me</h3>
           <div className="social-media mt-10">
             <a href='https://www.facebook.com/'><FaFacebook /></a>
             <a href='https://www.instagram.com/'><FaInstagram /></a>

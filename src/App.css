@@ -1,7 +1,7 @@
 :root{
     --color-blue: #009eb3;
-    --btn-bg : rgb(255, 90, 104);
-    --btn-bg-hover : rgb(255, 113, 116);
+    --btn-bg : #EE6983;
+    --btn-bg-hover : rgb(254, 63, 85);
     --color-off-white: rgb(216, 216, 216);
 }
 
@@ -22,11 +22,11 @@ button{
     background-color: var(--btn-bg);
     color: rgb(255, 255, 255);
     font-size: 16px;
-    box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.6);
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Poppins';
 }
 button:hover{
     padding: 10px 25px;
@@ -44,10 +44,9 @@ button:hover .btn-icon{
         margin: 16px 0;
         border-radius: 4px;
         font-size: 12px;
-        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.6);
     }
     button:hover{
-        padding: 8px 20px;
+        padding: 8px 16px;
     }
 }
 
@@ -59,9 +58,8 @@ responsive for tab device
         padding: 8px 16px;
         margin: 20px 0;
         font-size: 14px;
-        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.6);
     }
     button:hover{
-        padding: 8px 20px;
+        padding: 8px 16px;
     }
 }

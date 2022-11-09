@@ -32,8 +32,16 @@ const Homepage = () => {
             {
               services.map(service => <ServiceCard key={service._id} service={service} />)
             }
-          
+
           </div>
+        </div>
+
+        <div className='want-design'>
+          <div>
+            <p>Do you need to an</p>
+            <h1>Interior Designer?</h1>
+          </div>
+          <button className='btn-contact'>Contact Me</button>
         </div>
       </div>
     </>

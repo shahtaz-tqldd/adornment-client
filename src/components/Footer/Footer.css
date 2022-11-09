@@ -10,18 +10,21 @@ footer {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
-.footer-logo{
+.footer-logo a{
     display: flex;
     align-items: flex-end;
+    text-decoration: none;
 }
 .footer-logo img{
-    background-color: #fff;
+    background-color: rgb(89, 200, 255);
     height: 40px;
     padding: 15px;
     border-radius: 12px 0;
 }
-.footer-logo h3{
+.footer-logo a h2{
     margin-left: 10px;
+    color: rgb(89, 200, 255);
+    font-weight: 200;
 }
 .footer-link{
     display: flex;
@@ -58,7 +61,7 @@ footer {
     margin-right: 10px;
     font-size: 18px;
     background-color: #fff;
-    padding: 8px 8px 3px 8px;
+    padding: 4px 5px 0 5px;
     border-radius: 3px;
 }
 .social-media a:hover{
