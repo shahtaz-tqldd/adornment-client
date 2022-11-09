@@ -5,10 +5,12 @@ import profile from '../../assets/icons/profile.png'
 import React from 'react'
 import { Link, useLoaderData } from 'react-router-dom'
 import './ServiceDetails.css'
+import useTitle from '../../assets/hooks/useTitle'
 
 const ServiceDetails = () => {
     const serviceDetails = useLoaderData()
     const { serviceName, images, duration, description, cost, features } = serviceDetails
+    useTitle(`- ${serviceName}`)
     const { img1, img2, img3, img4 } = images
     return (
         <div className='container service-details'>
