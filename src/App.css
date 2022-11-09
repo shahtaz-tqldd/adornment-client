@@ -1,7 +1,8 @@
 :root{
     --color-blue: #009eb3;
     --btn-bg : rgb(255, 90, 104);
-    --btn-bg-hover : rgb(255, 113, 116) ;
+    --btn-bg-hover : rgb(255, 113, 116);
+    --color-off-white: rgb(216, 216, 216);
 }
 
 .container{

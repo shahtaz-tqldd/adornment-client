@@ -1,0 +1,117 @@
+footer {
+    background-color: #222;
+    color: #fff;
+    margin-top: 100px;
+    padding: 30px 0;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.footer-logo{
+    display: flex;
+    align-items: flex-end;
+}
+.footer-logo img{
+    background-color: #fff;
+    height: 40px;
+    padding: 15px;
+    border-radius: 12px 0;
+}
+.footer-logo h3{
+    margin-left: 10px;
+}
+.footer-link{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+.footer-link a{
+    text-decoration: none;
+    color: var(--color-off-white);
+    margin: 5px;
+}
+.footer-link a:hover{
+    color: rgb(255, 192, 2);
+    transition: 0.5s;
+}
+
+/* footer-column-2 */
+.footer-about p{
+    color: var(--color-off-white);
+    width: 300px;
+    font-size: 14px;
+    margin: 8px 0 25px;
+}
+
+.mt-30{
+    margin-top: 30px;
+}
+.mt-10{
+    margin-top: 10px;
+}
+.mb-10{margin-bottom: 10px;}
+
+.social-media a{
+    margin-right: 10px;
+    font-size: 18px;
+    background-color: #fff;
+    padding: 8px 8px 3px 8px;
+    border-radius: 3px;
+}
+.social-media a:hover{
+    background-color: rgb(255, 192, 2);
+    transition: 0.5s;
+}
+.social-media a:nth-child(4n+1){
+    color: rgb(7, 110, 255);
+}
+.social-media a:nth-child(4n+2){
+    color: rgb(255, 18, 160);
+}
+.social-media a:nth-child(4n+3){
+    color: rgb(56, 179, 255);
+}
+.social-media a:nth-child(4n+4){
+    color: rgb(0, 130, 211);
+}
+.copyright {
+    text-align: center;
+    color: rgb(3, 180, 133);
+    margin: 30px 0 -10px 0;
+}
+
+@media screen and (max-width: 667px) {
+    footer{
+        padding: 30px;
+    }
+    .footer-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .footer-about p{
+        width: 100%;
+    }
+    .footer-link{
+        flex-direction: row;
+    }
+    .footer-link a{
+        margin-right: 15px;
+        padding: 8px 16px;
+        background-color: rgba(255, 255, 255, 0.393);
+        border-radius: 20px;
+    }
+}
+
+/*------------------------
+responsive for tab device
+-------------------------- */
+@media screen and (min-width: 668px) and (max-width: 992px) {
+    footer{
+        padding: 30px;
+    }
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
