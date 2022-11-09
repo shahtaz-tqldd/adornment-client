@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.errorpage-container{
+    text-align: center;
+    margin: 20px auto;
+    min-height: 70vh;
+}
+.errorpage-container img{
+    height: 260px;
+}
+.errorpage-container h1{
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: rgb(44, 44, 44);
+}
+.errorpage-container p:nth-child(2n+1){
+    font-size: 18px;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.errorpage-container p:nth-child(2n) a{
+    margin-top: 20px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.errorpage-container p:nth-child(2n) a{
+    text-decoration: none;
+    color: rgba(32, 136, 255);
+}
+
+.icon{
+    background-color: rgba(32, 136, 255, 0.7);
+    padding: 15px;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 50%;
+}

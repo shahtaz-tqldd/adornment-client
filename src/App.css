@@ -1,4 +1,34 @@
+:root{
+    --color-blue: #009eb3;
+    --btn-bg : rgb(255, 90, 104);
+    --btn-bg-hover : rgb(255, 113, 116) ;
+}
+
 .container{
     max-width: 1200px;
     margin: 0 auto;
+}
+
+button{
+    padding: 10px 20px;
+    margin: 25px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--btn-bg);
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+button:hover{
+    padding: 10px 25px;
+    background-color: var(--btn-bg-hover);
+    transition: 0.25s;
+}
+button:hover .btn-icon{
+    margin-left: 5px;
+    transition: 0.25s;
 }

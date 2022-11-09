@@ -72,7 +72,7 @@ nav {
 
 .nav-items a {
     text-decoration: none;
-    color: rgb(34, 119, 255);
+    color: var(--color-blue);
     margin: 0 20px;
 }
 
