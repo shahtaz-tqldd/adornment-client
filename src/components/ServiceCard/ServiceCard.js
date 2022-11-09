@@ -2,10 +2,10 @@ import React from 'react'
 import './ServiceCard.css'
 
 const ServiceCard = ({service}) => {
-    const {name} = service
+    const {serviceName} = service
   return (
     <div className='service-card'>
-        {name}
+        {serviceName}
     </div>
   )
 }

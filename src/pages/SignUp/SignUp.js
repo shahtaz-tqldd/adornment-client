@@ -7,7 +7,7 @@ import facebook from '../../assets/icons/facebook.png';
 import github from '../../assets/icons/github.png';
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLock, faUser, faUserCircle } from '@fortawesome/free-solid-svg-icons';
+import { faCamera, faLock, faUser, faUserCircle } from '@fortawesome/free-solid-svg-icons';
 
 const SignUp = () => {
   useTitle('- SignUp')
@@ -23,7 +23,10 @@ const SignUp = () => {
           <input type="email" name="email" id="" placeholder='username@email.com' /> <br />
           
           <FontAwesomeIcon className='login-icon' icon={faUserCircle} />
-          <input type="text" name="password" id="" placeholder='John Doe' /> <br />
+          <input type="text" name="name" id="" placeholder='Enter Your Name' /> <br />
+          
+          <FontAwesomeIcon className='login-icon' icon={faCamera} />
+          <input type="text" name="photoUrl" id="" placeholder='photo url' /> <br />
           
           <FontAwesomeIcon className='login-icon' icon={faLock} />
           <input type="password" name="password1" id="" placeholder='password' /> <br />

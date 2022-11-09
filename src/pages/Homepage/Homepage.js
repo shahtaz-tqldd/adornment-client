@@ -5,6 +5,9 @@ import AboutUs from './AboutUs/AboutUs';
 import Banner from './Banner/Banner';
 import plant from '../../assets/images/error.png'
 import './Homepage.css';
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRightLong } from '@fortawesome/free-solid-svg-icons';
 
 const Homepage = () => {
   useTitle('')
@@ -31,9 +34,11 @@ const Homepage = () => {
 
           <div className='service-card-container'>
             {
-              services.map(service => <ServiceCard key={service._id} service={service} />)
+              services.slice(0, 3).map(service => <ServiceCard key={service._id} service={service} />)
             }
-
+          </div>
+          <div className='btn-see-all'>
+            <Link to='/services'>See All Services &nbsp; <FontAwesomeIcon className='see-icon' icon={faArrowRightLong} /></Link>
           </div>
         </div>
 
