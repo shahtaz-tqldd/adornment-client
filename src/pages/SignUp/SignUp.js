@@ -2,13 +2,11 @@ import React, { useContext, useState } from 'react'
 import useTitle from '../../assets/hooks/useTitle'
 import '../Login/Login.css';
 import login from '../../assets/images/signup.png'
-import google from '../../assets/icons/google.png';
-import facebook from '../../assets/icons/facebook.png';
-import github from '../../assets/icons/github.png';
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCamera, faLock, faUser, faUserCircle, faWarning } from '@fortawesome/free-solid-svg-icons';
 import { AuthContext } from '../../context/AuthProvider';
+import SignUpWith from './SignUpWith'
 
 const SignUp = () => {
   useTitle('- SignUp')
@@ -97,11 +95,7 @@ const SignUp = () => {
         </div>
 
         <h3 className='center mb-10'>Sign Up With</h3>
-        <div className='login-social'>
-          <span><img src={google} alt="login with google" /></span>
-          <span><img src={facebook} alt="login with facebook" /></span>
-          <span><img src={github} alt="login with github" /></span>
-        </div>
+        <SignUpWith />
         <p className='sign-up'>Already have an Account? <Link to='/login'>Login Here</Link></p>
       </div>
     </div>
