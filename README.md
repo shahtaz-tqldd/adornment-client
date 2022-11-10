@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+### Project Name: Adornment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Live Website Link
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
+## About this Project
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This project is a service review of a Interior Designer. He sells his diffrent services. People can see what he is selling and they can open account and review the services in the website.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Oraganized Folder Stracture
+Like a good react project, organized folder structure has created first to design the full website. Anyone will have a better understanding of the components and pages in the src folder.
 
-### `npm test`
+### Made routes with react router dom
+React router dom was install and used in this project to load different routing path. createBrowserRouter was used to create router of Homepage, Topics, Statistics and Blog page. Outlet is used in the main section and other routing path was used in the children of Main to use Navbar and Footer section static in every pages.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Font Awesome Icons were used
+Font awesome icons have been installed and used in this project in different sections. 
 
-### `npm run build`
+### Firebase is used for User Accounts
+firebase has been used to store user data. Google, Github and Facebook login has been done along with email and password.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### MongoDb has used in the backend
+For storing the services data, mongodb is used. Also review of the people are stored in the mongo db backedn.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Express JS is used for server and Vercel is used for hosting the backend
+Server is created with Express js and the server side is host in the vercel. Environment variable is used to hides the secret information with the help of dotenv confifurarion
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### The Client side of the website was uploaded and hosted to Firebase
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
