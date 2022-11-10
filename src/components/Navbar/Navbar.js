@@ -3,7 +3,7 @@ import './Navbar.css'
 import logo from '../../assets/icons/logo.png';
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faXmark, faAngleDown } from '@fortawesome/free-solid-svg-icons'
 import { AuthContext } from '../../context/AuthProvider';
 
 const Navbar = () => {
@@ -42,7 +42,9 @@ const Navbar = () => {
           {
             user ?
               <div className="user-profile" >
-                <img onClick={() => setMenu(!menu)} src={user.photoURL} alt="" />
+                <p>{user.displayName.split(' ')[0]}</p>
+                <img src={user.photoURL} alt="" />
+                <FontAwesomeIcon style={{cursor:"pointer"}} onClick={() => setMenu(!menu)} icon={faAngleDown} />
                 {
                   !menu ?
                     <span></span>

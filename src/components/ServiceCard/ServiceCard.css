@@ -19,12 +19,16 @@
 .card-info {
     padding: 5px 10px;
 }
+.card-info h3{
+    color: var(--btn-bg);
+    font-size: 24px;
+}
 
 
 .card-info>div>a {
     font-size: 15px;
     padding: 7px 12px;
-    background-color: var(--btn-bg);
+    background-color: rgba(0, 173, 124, 0.803);
     text-decoration: none;
     color: #fff;
     border-radius: 4px;
