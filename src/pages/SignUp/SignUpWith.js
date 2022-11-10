@@ -4,7 +4,7 @@ import google from '../../assets/icons/google.png';
 import facebook from '../../assets/icons/facebook.png';
 import github from '../../assets/icons/github.png';
 import { AuthContext } from '../../context/AuthProvider';
-import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
+import { FacebookAuthProvider, GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
 
 const SignUpWith = () => {
@@ -12,6 +12,7 @@ const SignUpWith = () => {
     const {popUpSignIn} = useContext(AuthContext)
 
     const googleProvider = new GoogleAuthProvider()
+    const facebookProvider = new FacebookAuthProvider()
     const githubProvider = new GithubAuthProvider()
 
     const popWith = (provider) =>{
@@ -27,13 +28,17 @@ const SignUpWith = () => {
         popWith(googleProvider)
     }
 
+    const handleFacebookSignIn =()=>{
+        popWith(facebookProvider)
+    }
+
     const handleGithubSignIn =()=>{
         popWith(githubProvider)
     }
     return (
         <div className='login-social'>
             <span onClick={handleGoogleSignIn}><img src={google} alt="login with google" /></span>
-            <span><img src={facebook} alt="login with facebook" /></span>
+            <span onClick={handleFacebookSignIn}><img src={facebook} alt="login with facebook" /></span>
             <span onClick={handleGithubSignIn}><img src={github} alt="login with github" /></span>
         </div>
     )
