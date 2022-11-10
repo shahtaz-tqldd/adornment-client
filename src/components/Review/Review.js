@@ -1,13 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Review.css';
 
-const Review = ({ review, handleDeleteButton }) => {
+const Review = ({ review, handleDeleteButton, handleUpdateButton }) => {
     const { nameService, serviceImg, cost, reviewText, _id } = review
-    
-    const handleDelete =()=>{
+    const [edit, setEdit] = useState(false)
+
+    const handleDelete = () => {
         handleDeleteButton(_id)
     }
-    
+
+
+    const handleUpdate = (e) =>{
+        handleUpdateButton(e, _id)
+        setEdit(false)
+    }
+
     return (
         <div className='my-review-container'>
             <div className='review-img'>
@@ -18,9 +25,21 @@ const Review = ({ review, handleDeleteButton }) => {
                 <p>BDT {cost} per square feet</p>
                 <p><small>My Review</small> <br />{reviewText}</p>
                 <div className='btn-edit-delete'>
-                    <button>Edit</button>
+                    <button onClick={() => setEdit(!edit)}>Edit</button>
                     <button onClick={handleDelete}>Delete</button>
                 </div>
+                {
+                    edit ?
+                        <div className='edit'>
+                            <p>Edit Your Review</p>
+                            <form onSubmit={handleUpdate}>
+                                <textarea id='review' className='edit-text' name='reviewBody' defaultValue={reviewText} /> <br />
+                                <input className="submit" type="submit" value="submit" />
+                            </form>
+                        </div>
+                    :<span></span>    
+            }
+
             </div>
         </div>
     )

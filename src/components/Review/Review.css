@@ -41,3 +41,13 @@
 .btn-edit-delete button:nth-child(2n+2){
     margin-bottom: -10px;
 }
+
+.edit{
+    margin-top: 40px;
+}
+.edit-text{
+    outline: 2px solid rgb(235, 157, 1) !important;
+}
+.edit-text:focus{
+    outline: 2px solid rgb(0, 203, 129) !important;
+}

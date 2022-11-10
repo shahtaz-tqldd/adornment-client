@@ -16,23 +16,49 @@ const MyReviews = () => {
       .catch(err => console.error(err))
   }, [user.email])
 
-  const handleDeleteButton = (id) =>{
+  const handleDeleteButton = (id) => {
     fetch(`http://localhost:5000/reviews/${id}`, {
-        method: 'DELETE'
+      method: 'DELETE'
+    })
+      .then(res => res.json())
+      .then(data => {
+        if (data.deletedCount > 0) {
+          const remaining = reviews.filter(rev => rev._id !== id);
+          setReviews(remaining)
+        }
+      })
+      .catch(err => console.error(err))
+  }
+
+  const handleUpdateButton = (e, id) =>{
+    e.preventDefault()
+    const form = e.target;
+    const text = form.reviewBody.value
+    
+    fetch(`http://localhost:5000/reviews/${id}`,{
+        method: 'PATCH',
+        headers: {
+            'Content-type': 'application/json'
+        },
+        body: JSON.stringify({reviewText: text})
     })
     .then(res=>res.json())
     .then(data=>{
-      if(data.deletedCount>0){
-        const remaining = reviews.filter(rev => rev._id !== id);
-        setReviews(remaining)
-      }})
-    .catch(err=>console.error(err))
-}
+        console.log(data)
+        if(data.modifiedCount > 0){
+          const remaining = reviews.filter(rev=> rev._id !== id)
+          const updated = reviews.find(rev=> rev._id === id)
+          updated.reviewText = text;
+          const newReviews = [...remaining, updated]
+          setReviews(newReviews)
+        }
+    })
+  }
   return (
     <div className='container'>
       <h1 style={{ margin: "30px 0", color: "var(--color-blue)" }}>My Reviews </h1>
       {
-        reviews.map(review => <Review key={review.service} review={review} handleDeleteButton={ handleDeleteButton} />)
+        reviews.map(review => <Review key={review.service} review={review} handleDeleteButton={handleDeleteButton} handleUpdateButton={handleUpdateButton} />)
       }
     </div>
   )
