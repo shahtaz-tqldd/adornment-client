@@ -13,7 +13,7 @@ const AboutUs = () => {
                 <img src={about1} alt="" />
             </div>
             <div className='about-text'>
-                <h2>About Us</h2>
+                <h2>Why Adornment?</h2>
                 <div className='about-point'>
                     <div>
                         <FontAwesomeIcon className='icon-point' icon={faTools} />

@@ -10,6 +10,11 @@
     width: 700px;
     object-fit: cover;
     border-radius: 7px;
+    cursor: pointer;
+}
+.service-details img:hover{
+    scale: 1.015;
+    transition: 0.25s;
 }
 
 .service-details-head{

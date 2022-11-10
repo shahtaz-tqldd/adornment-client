@@ -6,6 +6,8 @@ import { Link, useLoaderData } from 'react-router-dom'
 import './ServiceDetails.css'
 import useTitle from '../../assets/hooks/useTitle'
 import { AuthContext } from '../../context/AuthProvider'
+import 'react-photo-view/dist/react-photo-view.css';
+import { PhotoProvider, PhotoView } from 'react-photo-view';
 
 const ServiceDetails = () => {
     const [reviews, setReviews] = useState([])
@@ -77,9 +79,22 @@ const ServiceDetails = () => {
             </div>
             <h2 className='h-2'>Some of Our Design</h2>
             <div className='services-img'>
-                <img src={img2} alt="" />
-                <img src={img3} alt="" />
-                <img src={img4} alt="" />
+                <PhotoProvider>
+                    <PhotoView src={img2}>
+                        <img src={img2} alt="" />
+                    </PhotoView>
+                </PhotoProvider>
+                <PhotoProvider>
+                    <PhotoView src={img3}>
+                        <img src={img3} alt="" />
+                    </PhotoView>
+                </PhotoProvider>
+                <PhotoProvider>
+                    <PhotoView src={img4}>
+                        <img src={img4} alt="" />
+                    </PhotoView>
+                </PhotoProvider>
+
             </div>
             <div className='features'>
                 <h2 className='h-2'>Features</h2>

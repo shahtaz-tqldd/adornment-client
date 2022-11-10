@@ -19,6 +19,7 @@ const Homepage = () => {
       </section>
 
       <div className='container'>
+      
         <AboutUs />
 
         <div className='home-services'>
