@@ -1,0 +1,43 @@
+.my-review-container{
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+}
+
+.review-img img{
+    height: 250px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.review-text{
+    margin: 20px;
+}
+
+.review-text h1{
+    color: var(--btn-bg);
+    margin-bottom: 10px;
+}
+.review-text p:nth-child(2n){
+    font-size: 25px;
+}
+.review-text p:nth-child(2n+1){
+    margin-top: 15px;
+}
+.btn-edit-delete{
+    display: flex;
+    flex-direction: row;
+    gap: 0 20px;
+    
+}
+.btn-edit-delete button:nth-child(2n+1){
+    margin-bottom: -10px;
+    background-color: rgb(0, 132, 214);
+}
+.btn-edit-delete button:nth-child(2n+2){
+    margin-bottom: -10px;
+}

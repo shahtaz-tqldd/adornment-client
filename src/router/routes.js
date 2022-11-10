@@ -3,6 +3,7 @@ import Blogs from "../pages/Blogs/Blogs";
 import Errorpage from "../pages/Errorpage/Errorpage";
 import Homepage from "../pages/Homepage/Homepage";
 import Login from "../pages/Login/Login";
+import MyReviews from "../pages/MyReviews/MyReviews";
 import Services from "../pages/Service/Services";
 import ServiceDetails from "../pages/ServiceDetails/ServiceDetails";
 import SignUp from "../pages/SignUp/SignUp";
@@ -32,6 +33,10 @@ export const routes = createBrowserRouter([
             {
                 path: '/blogs',
                 element : <PrivateRoute><Blogs /></PrivateRoute>
+            },
+            {
+                path: '/my-reviews',
+                element : <PrivateRoute><MyReviews /></PrivateRoute>
             },
             {
                 path: '/login',

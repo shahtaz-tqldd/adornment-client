@@ -33,6 +33,7 @@ const ServiceDetails = () => {
             serviceImg: img1,
             cost,
             reviewUser: user.displayName,
+            reviewUserEmail: user.email,
             reviewUserImg: user.photoURL,
             reviewText: reviewBody
         }

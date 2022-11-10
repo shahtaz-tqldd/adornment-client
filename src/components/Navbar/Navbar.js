@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
 import './Navbar.css'
 import logo from '../../assets/icons/logo.png';
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faXmark, faAngleDown } from '@fortawesome/free-solid-svg-icons'
 import { AuthContext } from '../../context/AuthProvider';
@@ -11,10 +11,15 @@ const Navbar = () => {
   const [menu, setMenu] = useState(false)
   const { user, logOut } = useContext(AuthContext)
 
+  const navigate = useNavigate()
   const handleLogOut = () => {
     logOut()
       .then(() => {setMenu(false)})
       .catch(err => console.error(err))
+  }
+
+  const handleMyReviews = e =>{
+    navigate('/my-reviews')
   }
   return (
     <nav>
@@ -51,7 +56,7 @@ const Navbar = () => {
                     :
                     <div className="dropdown">
                       <FontAwesomeIcon className="cross-icon" onClick={() => setMenu(!menu)} icon={faXmark} />
-                      <div>User Profile</div>
+                      <span className='my-reviews' onClick={handleMyReviews}>My Reviews</span>
                       <div className="logout" onClick={handleLogOut}>Logout</div>
                     </div>
                 }

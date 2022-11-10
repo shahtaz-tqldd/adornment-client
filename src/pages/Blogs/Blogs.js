@@ -11,7 +11,7 @@ const Blogs = () => {
       {
         user? <div>
           <h1>Hello {user.displayName}</h1>
-          <img style={{height:"100px", width:"100px", objectFit:"cover", borderRadius:"50%"}} src={user.photoURL}></img>
+          <img style={{height:"100px", width:"100px", objectFit:"cover", borderRadius:"50%"}} src={user.photoURL} alt=""></img>
           
           </div>
         : <h2>Welcome to Blogs</h2>

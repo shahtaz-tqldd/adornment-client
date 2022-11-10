@@ -130,7 +130,16 @@ user-profile
     background-color: var(--btn-bg);
     cursor: pointer;
     color: #f9f9f9;
-    margin-top: 10px;
+    margin-top: 20px;
+}
+.my-reviews{
+    color: rgb(54, 54, 54);
+    cursor: pointer;
+    padding: 5px;
+}
+.my-reviews:hover{
+    color: rgb(0, 117, 196);
+    transition: 0.25s;
 }
 
 
