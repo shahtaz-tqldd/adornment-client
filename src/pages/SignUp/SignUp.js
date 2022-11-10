@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import useTitle from '../../assets/hooks/useTitle'
 import '../Login/Login.css';
 import login from '../../assets/images/signup.png'
@@ -7,12 +7,13 @@ import facebook from '../../assets/icons/facebook.png';
 import github from '../../assets/icons/github.png';
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCamera, faLock, faUser, faUserCircle } from '@fortawesome/free-solid-svg-icons';
+import { faCamera, faLock, faUser, faUserCircle, faWarning } from '@fortawesome/free-solid-svg-icons';
 import { AuthContext } from '../../context/AuthProvider';
 
 const SignUp = () => {
   useTitle('- SignUp')
   const {createUser, updateUserProfile} = useContext(AuthContext)
+  const [error, setError] = useState('')
 
   // form sign up
   const handleSignUp = e =>{
@@ -24,16 +25,29 @@ const SignUp = () => {
     const password1 = form.password1.value
     const password2 = form.password2.value
 
-    createUser(email, password1)
+    if(password1 !== password2){
+      setError(`Your Password Didn't Match`)
+    }
+    if(password1.length<6){
+      setError(`Your Password is too small`)
+    }
+    if(password1.length >=6 && password1===password2){
+      createUser(email, password1)
       .then(result=>{
         const user = result.user;
         console.log(user)
+        setError('')
         form.reset()
         handeUpdateProfile(name, photoURL)
       })
-      .catch(err=> console.error(err))
-
+      .catch(err=> {
+        console.error(err)
+        setError(err.message)
+      })
   }
+    }
+
+ 
   const handeUpdateProfile = (name, photoURL) =>{
     const profile = {
       displayName: name,
@@ -53,19 +67,27 @@ const SignUp = () => {
         <h2 className='center mb-10'>Sign Up</h2>
         <form onSubmit={handleSignUp}>
           <FontAwesomeIcon className='login-icon' icon={faUser} />
-          <input type="email" name="email" id="" placeholder='username@email.com' /> <br />
+          <input type="email" name="email" id="" placeholder='username@email.com' required/> <br />
           
           <FontAwesomeIcon className='login-icon' icon={faUserCircle} />
-          <input type="text" name="name" id="" placeholder='Enter Your Name' /> <br />
+          <input type="text" name="name" id="" placeholder='Enter Your Name' required/> <br />
           
           <FontAwesomeIcon className='login-icon' icon={faCamera} />
-          <input type="text" name="photoURL" id="" placeholder='photo url' /> <br />
+          <input type="text" name="photoURL" id="" placeholder='photo url' required/> <br />
           
           <FontAwesomeIcon className='login-icon' icon={faLock} />
-          <input type="password" name="password1" id="" placeholder='password' /> <br />
+          <input type="password" name="password1" id="" placeholder='password' required/> <br />
           
           <FontAwesomeIcon className='login-icon' icon={faLock} />
-          <input type="password" name="password2" id="" placeholder='confirm password' /> <br />
+          <input type="password" name="password2" id="" placeholder='confirm password' required/> <br />
+          
+          {
+            error? 
+            <div className='error-message'>
+              <small><FontAwesomeIcon icon={faWarning} /> {error}</small>
+            </div>
+            :<span></span>
+          }
           <input className='btn-login' type="submit" value="Sign Up" />
         </form>
         <div className='hr-line'>
