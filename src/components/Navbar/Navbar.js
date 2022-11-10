@@ -8,12 +8,13 @@ import { AuthContext } from '../../context/AuthProvider';
 
 const Navbar = () => {
   const [open, setOpen] = useState(false)
-  const {user, logOut} = useContext(AuthContext)
+  const [menu, setMenu] = useState(false)
+  const { user, logOut } = useContext(AuthContext)
 
-  const handleLogOut =()=>{
+  const handleLogOut = () => {
     logOut()
-      .then(()=>{})
-      .catch(err=>console.error(err))
+      .then(() => {setMenu(false)})
+      .catch(err => console.error(err))
   }
   return (
     <nav>
@@ -39,7 +40,22 @@ const Navbar = () => {
 
         <div className='nav-items2'>
           {
-            user ? <div onClick={handleLogOut}>Logout</div>
+            user ?
+              <div className="user-profile" >
+                <img onClick={() => setMenu(!menu)} src={user.photoURL} alt="" />
+                {
+                  !menu ?
+                    <span></span>
+                    :
+                    <div className="dropdown">
+                      <FontAwesomeIcon className="cross-icon" onClick={() => setMenu(!menu)} icon={faXmark} />
+                      <div>User Profile</div>
+                      <div className="logout" onClick={handleLogOut}>Logout</div>
+                    </div>
+                }
+
+
+              </div>
               : <>
                 <Link to='/login'>Sign In</Link>
                 <Link to='/sign-up'>Sign Up</Link>

@@ -64,11 +64,11 @@ const SignUp = () => {
       <div className='login-form-container'>
         <h2 className='center mb-10'>Sign Up</h2>
         <form onSubmit={handleSignUp}>
-          <FontAwesomeIcon className='login-icon' icon={faUser} />
-          <input type="email" name="email" id="" placeholder='username@email.com' required/> <br />
-          
           <FontAwesomeIcon className='login-icon' icon={faUserCircle} />
-          <input type="text" name="name" id="" placeholder='Enter Your Name' required/> <br />
+          <input type="text" name="name" id="" placeholder='Your Name' required/> <br />
+          
+          <FontAwesomeIcon className='login-icon' icon={faUser} />
+          <input type="email" name="email" id="" placeholder='Your Email' required/> <br />
           
           <FontAwesomeIcon className='login-icon' icon={faCamera} />
           <input type="text" name="photoURL" id="" placeholder='photo url' required/> <br />

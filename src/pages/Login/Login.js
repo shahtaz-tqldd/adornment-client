@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react'
 import useTitle from '../../assets/hooks/useTitle'
 import './Login.css'
 import login from '../../assets/images/login.png'
-import { Link } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLock, faUser, faWarning } from '@fortawesome/free-solid-svg-icons';
 import { AuthContext } from '../../context/AuthProvider';
@@ -12,6 +12,11 @@ const Login = () => {
   useTitle('- Login')
   const [error, setError] = useState('')
   const { loginUser } = useContext(AuthContext)
+
+  const navigate = useNavigate();
+  const location = useLocation()
+
+  const from = location.state?.from?.pathname || '/';
 
   const handleLogin = e => {
     e.preventDefault();
@@ -25,6 +30,7 @@ const Login = () => {
         console.log(user);
         setError('')
         form.reset()
+        navigate(from, {replace: true})
       })
       .catch(err => {
         console.error(err)
