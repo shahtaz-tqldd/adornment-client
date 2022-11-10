@@ -51,3 +51,10 @@
 .edit-text:focus{
     outline: 2px solid rgb(0, 203, 129) !important;
 }
+
+.close-icon{
+    cursor: pointer;
+    color: var(--btn-bg);
+    font-size: 24px;
+    margin-left: auto;
+}

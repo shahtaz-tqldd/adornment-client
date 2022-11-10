@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import React, { useState } from 'react'
 import './Review.css';
 
@@ -31,6 +33,7 @@ const Review = ({ review, handleDeleteButton, handleUpdateButton }) => {
                 {
                     edit ?
                         <div className='edit'>
+                            <FontAwesomeIcon className='close-icon' onClick={() => setEdit(!edit)} icon={faXmark}/>
                             <p>Edit Your Review</p>
                             <form onSubmit={handleUpdate}>
                                 <textarea id='review' className='edit-text' name='reviewBody' defaultValue={reviewText} /> <br />
