@@ -7,7 +7,7 @@ const MyReviews = () => {
   const [reviews, setReviews] = useState([])
 
   useEffect(() => {
-    const url = `http://localhost:5000/my-reviews?email=${user.email}`
+    const url = `https://adornment-server.vercel.app/my-reviews?email=${user.email}`
     fetch(url)
       .then(res => res.json())
       .then(data => {
@@ -17,7 +17,7 @@ const MyReviews = () => {
   }, [user.email])
 
   const handleDeleteButton = (id) => {
-    fetch(`http://localhost:5000/reviews/${id}`, {
+    fetch(`https://adornment-server.vercel.app/reviews/${id}`, {
       method: 'DELETE'
     })
       .then(res => res.json())
@@ -35,7 +35,7 @@ const MyReviews = () => {
     const form = e.target;
     const text = form.reviewBody.value
     
-    fetch(`http://localhost:5000/reviews/${id}`,{
+    fetch(`https://adornment-server.vercel.app/reviews/${id}`,{
         method: 'PATCH',
         headers: {
             'Content-type': 'application/json'

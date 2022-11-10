@@ -19,7 +19,7 @@ const ServiceDetails = () => {
     useTitle(`- ${serviceName}`)
 
     useEffect(() => {
-        fetch('http://localhost:5000/reviews')
+        fetch('https://adornment-server.vercel.app/reviews')
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [reviews])
@@ -40,7 +40,7 @@ const ServiceDetails = () => {
             reviewText: reviewBody
         }
 
-        fetch('http://localhost:5000/reviews', {
+        fetch('https://adornment-server.vercel.app/reviews', {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json'
