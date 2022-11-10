@@ -12,7 +12,7 @@ import { AuthContext } from '../../context/AuthProvider';
 
 const SignUp = () => {
   useTitle('- SignUp')
-  const {createUser} = useContext(AuthContext)
+  const {createUser, updateUserProfile} = useContext(AuthContext)
 
   // form sign up
   const handleSignUp = e =>{
@@ -29,9 +29,19 @@ const SignUp = () => {
         const user = result.user;
         console.log(user)
         form.reset()
+        handeUpdateProfile(name, photoURL)
       })
       .catch(err=> console.error(err))
 
+  }
+  const handeUpdateProfile = (name, photoURL) =>{
+    const profile = {
+      displayName: name,
+      photoURL : photoURL
+    }
+    updateUserProfile(profile)
+      .then(()=>{})
+      .catch(err=>console.error(err))
   }
 
   return (
